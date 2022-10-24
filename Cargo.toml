@@ -17,6 +17,10 @@ xtensa-lx-rt = { version = "0.13.0", features = ["esp32s2"], optional = true }
 default = ["rt"]
 rt = ["xtensa-lx-rt"]
 
-[profile.release]
+[profile.release.package."*"]
 debug = true
-opt-level = 3 # 1, 2, 'z' or 's'
+opt-level = 0
+
+[profile.release.package.core]
+debug = true
+opt-level = 1 # 1, 2, 'z' or 's' for failure - when opt-level = 0 it works
