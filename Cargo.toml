@@ -22,5 +22,6 @@ debug = true
 opt-level = 0
 
 [profile.release.package.core]
+# overflow-checks = true # when this is true it works!
 debug = true
 opt-level = 1 # 1, 2, 'z' or 's' for failure - when opt-level = 0 it works
